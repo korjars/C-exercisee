@@ -83,5 +83,25 @@ printf("**gp=%d\n",**gp);
 printf("*(*gp+1)=%d\n",*(*gp+1));
 printf("*(*gp+2)=%d\n",*(*gp+2));
 printf("*(*gp+3)=%d\n",*(*gp+3));
+
+printf("下面尝试纯指针 指向数组 能不能用 p[i]来取值\n");
+
+int groupT[] = {1,2,3,4,5,6,7,8,9,0,4,6,4,53,563,24};
+int *test = groupT;
+
+for (int i = 0; i < 16; i++)
+{
+    printf("%d\n",test[i]);
+    if (&groupT[i] == &test[i])
+    {
+        printf("true");
+    }
+    
+    printf("%d\n",*(test+i));
+}
+
+
+
+
     return 0;
 }
