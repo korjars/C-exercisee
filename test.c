@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+//#include<algorithm>
+
 int main()
 {
     // char name[10];
@@ -199,7 +201,6 @@ printf("*((array+1)+1)=%d     *(*(array+1)+1)=%d\n",*((array+1)+1),*(*(array+1)+
 printf("((array+1)+1)=%d     (*(array+1)+1)=%d",((array+1)+1),(*(array+1)+1));
 
 //得出验证 ((array+1)+1)  等价于 array+2     (*(array+1)+1)为array[1][1]的地址
-
 
 
     return 0;

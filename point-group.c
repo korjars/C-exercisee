@@ -58,7 +58,7 @@ for (int i = 0; i < 2; i++)
     for (int j = 0; j < 6; j++)
     {
         printf("&grt2[%d][%d]:%d\n",i,j,&grt2[i][j]);
-        printf("%s\n",&grt2[i][j]);
+        printf("%s\n",grt2[i][j]);
     }
     printf("\n\n");
 }

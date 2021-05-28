@@ -157,7 +157,7 @@ void clear(struct LinkNode *header)
     while (pCurr->next != NULL)
     {
         /* code */
-    struct LinkNOde *clear = pCurr;
+    struct LinkNode *clear = pCurr;
     pCurr = pCurr->next;
     free(clear);
     }
