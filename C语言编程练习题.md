@@ -2408,6 +2408,3 @@ int get_gcd(int a,int b){
     return b;
 }
 ```
-
-
- - 如果您想转载这些内容，还望标明来源：https://bingyishow.top

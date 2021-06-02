@@ -19,8 +19,5 @@ int main(void)
     ///printf("%d",header->date);
     long long abc;
     printf("%d\n",sizeof(abc));
-    
-    
-    
     return 0;
 }

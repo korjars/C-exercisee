@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
+#include<string.h>
 
 int main()
 {
@@ -8,7 +9,7 @@ int main()
         int visit[510] = {0};
         int i, j, u, v, minn;
 
-
+//input the basic date of map
         for (i = 0; i < 510; i++)
                 dis[i] = INT_MAX;
         for (i = 0; i < 510; i++)
@@ -23,7 +24,7 @@ int main()
                 e[u][j] = v;
         }
 
-        dis[c1] = 0;
+        dis[c1] = 0;    //yourcity set the distance as 0
         w[c1] = weight[c1];
         num[c1] = 1;
         for (i = 0; i < n; i++) {
