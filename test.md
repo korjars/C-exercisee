@@ -70,3 +70,11 @@ $$\sum_{i=0}^{n}i^2$$
 > 
 > 或者定义$f(x)$如下（行间公式）: 
 > $$f(x) = \sum_{i=0}^{N}\int_{a}^{b} g(t,i) \text{ d}t{6}\tag{1}$$
+
+
+$$ f(x)=\begin{cases}4, &x=0\ 2, &x=4\ 1, &x=8\ \frac{1}{2}, &x=12\ 0, &{\text {否则}} \end{cases} $$
+$$ (f*g)(x)={\text {同时播放}_{t\in\mathbb R}}(\mathcal D\circ\mathcal V)\left(440\times \left(\sqrt[12]{2}\right)^{ f(t)g(x-t)-9}\right) $$
+
+
+
+# There are a teat.md

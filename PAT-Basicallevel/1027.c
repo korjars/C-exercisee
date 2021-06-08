@@ -1,4 +1,59 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<math.h>
+void printfc(int n,char c)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("%c",c);
+    }
+    
+}
+int main(void)
+{   char aa = 'a';
+   // printfc(10,aa);
+    int N = 0;
+    char M;
+    scanf("%d",&N);
+    scanf("%s",&M);
+    printf("%d\n",N);
+    printf("%c\n",M);
+
+    int u = 1;
+    int i = 1;
+    int count = 0;
+    while ((N+1)/2 > u)
+    {
+        i = i + 2;
+        u = u + i;
+        count++;
+    }
+    printf("%d\n",count);
+
+    for (int i = 0; i <count; i++)
+    {
+        printf("%*s",i,"");
+        printfc(2*(count -1- i) + 1,M);
+        printf("%*s",i,"");
+        printf("\n");
+    }
+    for (int i = 1; i < count; i++)
+    {
+        printf("%*s",count-1-i,"");
+        printfc(2*i+1,M);
+        printf("%*s",count-1-i,"");
+        printf("\n");
+    }
+    
+    
+    
+//     printf("%d\n",N);
+// 	   printf("%*s%s%*s",N,"","123",3,"" );
+//     printf("%*s",N," ");
+//     printf("%*s",N,"");
+    return 0;
+}
+
+// #include <stdio.h>
 
 // int main() {
 //     int N;
