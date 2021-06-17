@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include<time.h>
 #define MAX        256
 
 long total;
@@ -96,7 +96,35 @@ int main()
         findALLDirs(path);
         
         printf("目前你总共写了 %ld 行代码！\n\n", total);
-        system("pause");
+      //  system("pause");
+
+        struct tm * p;
+        time_t t;
+        time(&t);
+        p = localtime(&t);
+
+
+        FILE *fp;
+        int ch;
+        if ((fp = fopen("coderow.txt","a")) == NULL)
+        {
+             printf("failed open the file.\n");
+             exit(EXIT_FAILURE);
+        }
+        fprintf(fp,"\n%d-%d-%d目前你总共写了 %ld 行代码！\n",1900+p->tm_year,1+p->tm_mon,p->tm_mday,total);
+        fclose(fp);
+
+        if ((fp = fopen("coderow.txt","r")) == NULL)
+        {
+             printf("failed open the file.\n");
+             exit(EXIT_FAILURE);
+        }
+        while ((ch = getc(fp)) != EOF)
+        {
+                putchar(ch);
+        }
+        fclose(fp);
+        
         
         return 0;
 }
