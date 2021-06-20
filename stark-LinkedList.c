@@ -5,45 +5,45 @@
 #define MAX 100
 typedef struct starkLinkedList
 {
-    int date;
+        int date;
     struct starkLinkedList * next;
-    
+        
 }  node, * psnode;
 
 typedef struct Stark
 {
-    psnode PTOP;
-    psnode PBOTTOM;
+        psnode PTOP;
+        psnode PBOTTOM;
 
 } STARK, *PSTARK;
 
 void Initstark(PSTARK Stark)
 {
-    psnode new = (psnode)malloc(sizeof(node));
-    if (new == NULL)
-    {
-	    printf("failed malloc space of new node\n");
-	    exit(-1);
-    }
-    printf("Creat a stark succecfully.\n");
-    new->next = NULL;
-    Stark->PTOP = new;
-    Stark->PBOTTOM = new;
+        psnode new = (psnode)malloc(sizeof(node));
+        if (new == NULL)
+        {
+    	    printf("failed malloc space of new node\n");
+    	    exit(-1);
+        }
+        printf("Creat a stark succecfully.\n");
+        new->next = NULL;
+        Stark->PTOP = new;
+        Stark->PBOTTOM = new;
 }
 
 
 void PUSHSTARK(PSTARK Stark,int temp)
 {
-   psnode new = (psnode)malloc(sizeof(node));
-    if (new == NULL)
-    {
-	    printf("failed malloc space of new node\n");
-	    exit(-1);
-    }
-    printf("push the date into the stark succesfully.\n");
-    new->date = temp;
-    new->next = Stark->PTOP;
-    Stark->PTOP = new;
+        psnode new = (psnode)malloc(sizeof(node));
+        if (new == NULL)
+        {
+        	printf("failed malloc space of new node\n");
+        	exit(-1);
+        }
+        printf("push the date into the stark succesfully.\n");
+        new->date = temp;
+        new->next = Stark->PTOP;
+        Stark->PTOP = new;
 }
 
 void POPSTARK(PSTARK Stark)
@@ -56,8 +56,8 @@ void POPSTARK(PSTARK Stark)
 	//    }
 	if (Stark->PTOP == Stark->PBOTTOM)
 	{
-	    printf("The stark is empty\n");
-	    exit(-1);
+	printf("The stark is empty\n");
+	exit(-1);
 	}
 	int temp;
 	psnode ptemp = Stark->PTOP;

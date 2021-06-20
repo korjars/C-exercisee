@@ -108,7 +108,7 @@ int main()
 //    printf("\n\n");
 //}
 
-printf("¿´Ò»¿´Êı×éµÄ´¢´æ·½Ê½");
+printf("çœ‹ä¸€çœ‹æ•°ç»„çš„å‚¨å­˜æ–¹å¼");
 int i=0;
 int j = 0;
 int groupN[9] = {1,2,3,4,5,6,7,8,8};
@@ -131,89 +131,89 @@ for (int i = 0; i < 3; i++)
 }
 
 
-//  Ö¸ÕëÖ¸Õë Ö¸ÕëÊı×é Êı×éÖ¸Õë ¶şÎ¬Êı×é ×Ü½á±È½Ï
-// printf("¶¨ÒåËÄÕß\n");
-// printf("¶¨ÒåÖ¸ÕëÖ¸Õë\n");
+//  æŒ‡é’ˆæŒ‡é’ˆ æŒ‡é’ˆæ•°ç»„ æ•°ç»„æŒ‡é’ˆ äºŒç»´æ•°ç»„ æ€»ç»“æ¯”è¾ƒ
+// printf("å®šä¹‰å››è€…\n");
+// printf("å®šä¹‰æŒ‡é’ˆæŒ‡é’ˆ\n");
 // int a = 5 ;
 // int *p = &a;
 // int **pp = &p;
 // printf("sizeof(a):%d\n",sizeof(a));
 // printf("sizeof(p):%d\n",sizeof(p));
 // printf("sizeof(pp):%d\n",sizeof(pp));
-// printf("µØÖ·(a):%d\n",(&a));
-// printf("µØÖ·(p):%d\n",(&p));
-// printf("µØÖ·(pp):%d\n",(&pp));
+// printf("åœ°å€(a):%d\n",(&a));
+// printf("åœ°å€(p):%d\n",(&p));
+// printf("åœ°å€(pp):%d\n",(&pp));
 
 
-// printf("\n¶¨ÒåÖ¸ÕëÊı×é\n");
+// printf("\nå®šä¹‰æŒ‡é’ˆæ•°ç»„\n");
 
-// printf("¶¨ÒåÊı×ÖÖ¸ÕëÊı×é\n");
+// printf("å®šä¹‰æ•°å­—æŒ‡é’ˆæ•°ç»„\n");
 // int *getN[] = {1,2,3,4};
 
 // printf("sizeof(getN):%d\n",sizeof(getN));
 // printf("sizeof(getN[0]):%d\n",sizeof(getN[0]));
 // printf("sizeof(*getN[0]):%d\n",sizeof(*getN[0]));
 // printf("*getN[1]:%d\n",*(getN+1));
-// printf("µØÖ·(getN):%d\n",(&getN));
-// printf("Öµ(getN):%d\n",getN);
+// printf("åœ°å€(getN):%d\n",(&getN));
+// printf("å€¼(getN):%d\n",getN);
 // printf("*(getN):%d\n",*getN);
-// printf("Öµ(getN[0]):%d\n",getN[0]);
-// printf("Öµ(getN[2]):%d\n",getN[3]);
+// printf("å€¼(getN[0]):%d\n",getN[0]);
+// printf("å€¼(getN[2]):%d\n",getN[3]);
 
-printf("\n¶¨ÒåÊı×ÖÖ¸ÕëÊı×é2\n");
+printf("\nå®šä¹‰æ•°å­—æŒ‡é’ˆæ•°ç»„2\n");
 int *getN2[4][4] = {1,2,3,4,4,5,6,7,458,9,8,7,6};
 
 printf("sizeof(getN2):%d\n",sizeof(getN2));
 printf("sizeof(getN2[0]):%d\n",sizeof(getN2[0]));
 printf("sizeof(*getN2[0]):%d\n",sizeof(*getN2[0]));
-printf("µØÖ·(getN2):%d\n",(&getN2));
-printf("Öµ(getN2):%d\n",getN2);
-printf("Öµ(getN2+1):%d\n",getN2+1);
-printf("Öµ(getN2+2):%d\n",getN2+2);
-printf("Öµ(getN2+3):%d\n",getN2+3);
-printf("Öµ*getN2):%d\n",*getN2);
-printf("Öµ*getN2+1):%d\n",*getN2+1);
-printf("Öµ*getN2+2):%d\n",*getN2+2);
-printf("Öµ*getN2+3):%d\n",*getN2+3);
-printf("Öµ*(*getN2):%d\n",**getN2);
-printf("Öµ*(*getN2+1):%d\n",*(*getN2+1));
-printf("Öµ*(*getN2+2):%d\n",*(*getN2+2));
-printf("Öµ*(*getN2+3):%d\n",*(*getN2+3));
+printf("åœ°å€(getN2):%d\n",(&getN2));
+printf("å€¼(getN2):%d\n",getN2);
+printf("å€¼(getN2+1):%d\n",getN2+1);
+printf("å€¼(getN2+2):%d\n",getN2+2);
+printf("å€¼(getN2+3):%d\n",getN2+3);
+printf("å€¼*getN2):%d\n",*getN2);
+printf("å€¼*getN2+1):%d\n",*getN2+1);
+printf("å€¼*getN2+2):%d\n",*getN2+2);
+printf("å€¼*getN2+3):%d\n",*getN2+3);
+printf("å€¼*(*getN2):%d\n",**getN2);
+printf("å€¼*(*getN2+1):%d\n",*(*getN2+1));
+printf("å€¼*(*getN2+2):%d\n",*(*getN2+2));
+printf("å€¼*(*getN2+3):%d\n",*(*getN2+3));
 printf("*(getN2):%d\n",*(getN2));
 printf("*(getN2+1):%d\n",*(getN2+1));
 printf("*(getN2+2):%d\n",*(getN2+2));
 printf("*(getN2+3):%d\n",*(getN2+3));
-printf("µØÖ·(getN2[0]):%d\n",(&getN2[0]));
+printf("åœ°å€(getN2[0]):%d\n",(&getN2[0]));
 printf("getN2[0]=%d\n",getN2[0]);
 printf("getN2[1]=%d\n",getN2[1]);
 printf("getN2[2]=%d\n",getN2[2]);
 printf("getN2[3]=%d\n",getN2[3]);
-// printf("\n¶¨Òå×Ö·ûÖ¸ÕëÊı×é\n");
+// printf("\nå®šä¹‰å­—ç¬¦æŒ‡é’ˆæ•°ç»„\n");
 // char *getC[] = {"a","b",'c','d'};
 
 // printf("sizeof(getC):%d\n",sizeof(getC));
 // printf("sizeof(getC[0]):%d\n",sizeof(getC[0]));
 // printf("sizeof(*getC[0]):%d\n",sizeof(*getC[0]));
-// printf("µØÖ·(getC):%d\n",(&getC));
-// printf("Öµ(getC):%d\n",getC);
+// printf("åœ°å€(getC):%d\n",(&getC));
+// printf("å€¼(getC):%d\n",getC);
 // printf("*(getC):%d\n",*getC);
-// printf("µØÖ·(getC[0]):%d\n",(&getC[0]));
+// printf("åœ°å€(getC[0]):%d\n",(&getC[0]));
 // printf("getC[[0][0]:%d\n",getC[0][0]);
 
 
-// printf("\n¶¨Òå×Ö·ûÖ¸ÕëÊı×é2\n");
+// printf("\nå®šä¹‰å­—ç¬¦æŒ‡é’ˆæ•°ç»„2\n");
 // int *getC2[] = {"zhang","yichang","ceshi","zifu"};
 
 // printf("sizeof(getC2):%d\n",sizeof(getC2));
 // printf("sizeof(getC2[0]):%d\n",sizeof(getC2[0]));
 // printf("sizeof(*getC2[0]):%d\n",sizeof(*getC2[0]));
-// printf("µØÖ·(getC2):%d\n",(&getC2));
-// printf("Öµ(getC2):%d\n",getC2);
+// printf("åœ°å€(getC2):%d\n",(&getC2));
+// printf("å€¼(getC2):%d\n",getC2);
 // printf("*(getC2):%d\n",*getC2);
-// printf("µØÖ·(getC2[0]):%d\n",(&getC2[0]));
+// printf("åœ°å€(getC2[0]):%d\n",(&getC2[0]));
 // printf("getC2[0][0]:%d\n",getC2[0][0]);
 
-printf("\n¶¨ÒåÊı×éÖ¸Õë\n");
+printf("\nå®šä¹‰æ•°ç»„æŒ‡é’ˆ\n");
 
 int temp = {0,1,2,3,4,5,6,7,8,9};
 int (*gp)[] = &temp;
@@ -238,7 +238,7 @@ printf("*(*gp+1)=%d\n",*(*gp+1));
 printf("*(*gp+2)=%d\n",*(*gp+2));
 printf("*(*gp+3)=%d\n",*(*gp+3));
 
-printf("\n¶¨Òå¶şÎ¬Êı×é\n");
+printf("\nå®šä¹‰äºŒç»´æ•°ç»„\n");
 
 
     return 0;
