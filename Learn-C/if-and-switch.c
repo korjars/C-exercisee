@@ -21,7 +21,7 @@ int main(void)
     scanf("%d",&a);
     switch (a)
     {
-    case 1:printf("1");printf("1");printf("1");printf("1");printf("1\n");//break;
+    case 1:printf("1");printf("1");printf("1");printf("1");printf("1\n");break;
     case 2:printf("1");printf("1");printf("1");printf("1");printf("1\n");//break;
     case 3:printf("1");printf("1");printf("1");printf("1");printf("1\n");//break;
     case 4:printf("1");printf("1");printf("1");printf("1");printf("1\n");//break;
@@ -47,4 +47,5 @@ int main(void)
 //switch 没有break下面的全部会执行全部会执行
 //switch 没有break下面的全部会执行全部会执行
     return 0;
+
 }
