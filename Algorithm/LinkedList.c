@@ -9,7 +9,9 @@ typedef struct LinkedList
 } Node, *Pnode;
 
 int main(void)
-{
-
+{	
+	Node L;
+	scanf("%d",&L.date);
+	printf("%d",L.date);
 	return 0;
 }
