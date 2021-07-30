@@ -42,9 +42,9 @@ int main()
 // printf("%s   %d",a, strlen(a));
     
     int a,  b,  c;    
-     b=2, c=3;
-     a = b + c;
-     b = 5;
+    b=2, c=3;
+    a = b + c;
+    b = 5;
 
     int *p_a = &a;
     int *p2_a = p_a;
@@ -132,7 +132,7 @@ array+1:%d\n\
 *(array+1):%d\n\
 &array[1]:%d\n\
 array+5:%d\n\
-array+9:%d\n\
+aray+9:%d\n\
 array+15:%d\n\
 array[0]:%d\n\
 array[1]:%d\n\
@@ -205,3 +205,4 @@ printf("((array+1)+1)=%d     (*(array+1)+1)=%d",((array+1)+1),(*(array+1)+1));
 
     return 0;
 }
+//https://gitee.com/ZhangYichang1999/zyichang-setting.git
