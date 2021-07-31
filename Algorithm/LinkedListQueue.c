@@ -54,9 +54,9 @@ int main()
 	for (int i = 0; i < 11; i++)
 	{
 		EnQueue(&Q , a[i]);
-		int temp;
-		GetValue(Q,&temp);
-		printf("%d\n",temp);
+		//int temp;
+		//GetValue(Q,&temp);
+		//printf("%d\n",temp);
 	}
 
 	for (int i = 0; i < 11; i++)

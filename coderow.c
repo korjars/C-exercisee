@@ -1,11 +1,10 @@
-
 #include <io.h>
 #include <direct.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include<time.h>
-#define MAX        256
+#define MAX  256
 
 long total;
 
@@ -108,16 +107,16 @@ int main()
         int ch;
         if ((fp = fopen("coderow.txt","a")) == NULL)
         {
-             printf("failed open the file.\n");
-             exit(EXIT_FAILURE);
+            printf("failed open the file.\n");
+            exit(EXIT_FAILURE);
         }
         fprintf(fp,"\n%d-%d-%d目前你总共写了 %ld 行代码！\n",1900+p->tm_year,1+p->tm_mon,p->tm_mday,total);
         fclose(fp);
 
         if ((fp = fopen("coderow.txt","r")) == NULL)
         {
-             printf("failed open the file.\n");
-             exit(EXIT_FAILURE);
+            printf("failed open the file.\n");
+            exit(EXIT_FAILURE);
         }
         while ((ch = getc(fp)) != EOF)
         {
@@ -128,3 +127,4 @@ int main()
         
         return 0;
 }
+
