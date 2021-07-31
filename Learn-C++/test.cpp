@@ -1,4 +1,5 @@
 #include<iostream>
+#include "Testcpp.h"
 using namespace std;
 int main()
 {
@@ -6,4 +7,5 @@ int main()
 	printf("%d\n",a);
 	cout << "hello,world !!!" ;
 	cout << "%d" << endl ;
+	PrintTestFile();
 }
