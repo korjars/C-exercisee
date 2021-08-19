@@ -1,10 +1,19 @@
 #include<stdio.h>
 int main(void)
 {
-    if (0)
-    {printf("测试if功能\n");
-    printf("test the founction of if\n");
-    printf("test the useage of if founction\n");}
+    if (1) 
+    
+    
+    
+    
+    
+    
+    printf("测试if功能\n");//此句属于if
+    //此处加语句不与上句括号在一起便会报错。
+    else
+
+
+    printf("test the founction of if\n");/*此句属于else*/printf("test the useage of if founction\n");//此句属于单独句不属于ifelse
 //if 只能保证下一句，除非括号
 //if 只能保证下一句，除非括号
 //if 只能保证下一句，除非括号

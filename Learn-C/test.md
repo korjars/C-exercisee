@@ -61,12 +61,12 @@ Second Term
 : This is another definition of the second term.
 
 - [x] Write the press release
-- [ ] Update the website
+- [x] Update the website
 - [ ] Contact the media
 
 $$\sum_{i=0}^{n}i^2$$
 
-> 我们定义$f(x) = \sum_{i=0}^{N}\int_{a}^{b} g(t,i) \text{ d}t$. (行内公式)
+> 我们定义$f(x) = \sum_{i=100}^{N}\int_{a}^{b} g(t,i) \text{ d}t$. (行内公式)
 > 
 > 或者定义$f(x)$如下（行间公式）: 
 > $$f(x) = \sum_{i=0}^{N}\int_{a}^{b} g(t,i) \text{ d}t{6}\tag{1}$$

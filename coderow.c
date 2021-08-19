@@ -14,117 +14,117 @@ void findALLFiles(const char *path);
 
 int countLines(const char *filename)
 {
-        FILE *fp;
-        int count = 0;
-        int temp;
-        
-        if ((fp = fopen(filename, "r")) == NULL) 
-        {
-                fprintf(stderr, "Can not open the file：%s\n", filename);
-                return 0;
-        }
-        
-        while ((temp = fgetc(fp)) != EOF)
-        {
-                if (temp == '\n')
+                FILE *fp;
+                int count = 0;
+                int temp;
+                
+                if ((fp = fopen(filename, "r")) == NULL) 
                 {
-                        count++;
+                                fprintf(stderr, "Can not open the file：%s\n", filename);
+                                return 0;
                 }
-        }
-        
-        fclose(fp);
-        
-        return count;
+                
+                while ((temp = fgetc(fp)) != EOF)
+                {
+                                if (temp == '\n')
+                                {
+                                                count++;
+                                }
+                }
+                
+                fclose(fp);
+                
+                return count;
 }
 
 void findAllCodes(const char *path)
 {
-        struct _finddata_t fa;
-        long handle;
-        char thePath[MAX], target[MAX];
-        
-        strcpy(thePath, path);
-        if((handle = _findfirst(strcat(thePath, "/*.c"), &fa)) != -1L)
-        {
-                do
+                struct _finddata_t fa;
+                long handle;
+                char thePath[MAX], target[MAX];
+                
+                strcpy(thePath, path);
+                if((handle = _findfirst(strcat(thePath, "/*.c"), &fa)) != -1L)
                 {
-                        sprintf(target, "%s/%s", path, fa.name);
-                        total += countLines(target);
-                }while (_findnext(handle, &fa) == 0);
-        }
-    
-        _findclose(handle);
+                                do
+                                {
+                                                sprintf(target, "%s/%s", path, fa.name);
+                                                total += countLines(target);
+                                }while (_findnext(handle, &fa) == 0);
+                }
+        
+                _findclose(handle);
 }
 
 void findALLDirs(const char *path)
 {
-        struct _finddata_t fa;
-        long handle;
-        char thePath[MAX];
-        
-        strcpy(thePath, path);
-        if((handle = _findfirst(strcat(thePath, "/*"), &fa)) == -1L)
-        {
-                fprintf(stderr, "The path %s is wrong!\n",path);
-                return;
-        }
-    
-        do
-        {        
-                if (!strcmp(fa.name, ".") || !strcmp(fa.name, ".."))
-                        continue;
-                    
-                if( fa.attrib == _A_SUBDIR)
-                {        
-                        sprintf(thePath, "%s/%s", path, fa.name);
-                        findAllCodes(thePath);
-                        findALLDirs(thePath);
+                struct _finddata_t fa;
+                long handle;
+                char thePath[MAX];
+                
+                strcpy(thePath, path);
+                if((handle = _findfirst(strcat(thePath, "/*"), &fa)) == -1L)
+                {
+                                fprintf(stderr, "The path %s is wrong!\n",path);
+                                return;
                 }
-        }while (_findnext(handle, &fa) == 0);
-    
-        _findclose(handle);   
+        
+                do
+                {                
+                                if (!strcmp(fa.name, ".") || !strcmp(fa.name, ".."))
+                                                continue;
+                                        
+                                if( fa.attrib == _A_SUBDIR)
+                                {                
+                                                sprintf(thePath, "%s/%s", path, fa.name);
+                                                findAllCodes(thePath);
+                                                findALLDirs(thePath);
+                                }
+                }while (_findnext(handle, &fa) == 0);
+        
+                _findclose(handle);   
 }
 
 int main()
 {
-        char path[MAX] = ".";
-        
-        printf("计算中...\n");
-        
-        findAllCodes(path);
-        findALLDirs(path);
-        
-        printf("目前你总共写了 %ld 行代码！\n\n", total);
-      //  system("pause");
+                char path[MAX] = ".";
+                
+                printf("计算中...\n");
+                
+                findAllCodes(path);
+                findALLDirs(path);
+                
+                printf("目前你总共写了 %ld 行代码！\n\n", total);
+          //  system("pause");
 
-        struct tm * p;
-        time_t t;
-        time(&t);
-        p = localtime(&t);
+                struct tm * p;
+                time_t t;
+                time(&t);
+                p = localtime(&t);
 
 
-        FILE *fp;
-        int ch;
-        if ((fp = fopen("coderow.txt","a")) == NULL)
-        {
-            printf("failed open the file.\n");
-            exit(EXIT_FAILURE);
-        }
-        fprintf(fp,"\n%d-%d-%d目前你总共写了 %ld 行代码！\n",1900+p->tm_year,1+p->tm_mon,p->tm_mday,total);
-        fclose(fp);
+                FILE *fp;
+                int ch;
+                if ((fp = fopen("coderow.txt","a")) == NULL)
+                {
+                                printf("failed open the file.\n");
+                                exit(EXIT_FAILURE);
+                }
+                fprintf(fp,"\n%d-%d-%d目前你总共写了 %ld 行代码！\n",1900+p->tm_year,1+p->tm_mon,p->tm_mday,total);
+                fclose(fp);
 
-        if ((fp = fopen("coderow.txt","r")) == NULL)
-        {
-            printf("failed open the file.\n");
-            exit(EXIT_FAILURE);
-        }
-        while ((ch = getc(fp)) != EOF)
-        {
-                putchar(ch);
-        }
-        fclose(fp);
-        
-        
-        return 0;
+                if ((fp = fopen("coderow.txt","r")) == NULL)
+                {
+                                printf("failed open the file.\n");
+                                exit(EXIT_FAILURE);
+                }
+                while ((ch = getc(fp)) != EOF)
+                {
+                                putchar(ch);
+                }
+                fclose(fp);
+                
+                
+                return 0;
 }
 
