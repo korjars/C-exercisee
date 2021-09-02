@@ -2,6 +2,6 @@
 #include <math.h>
 int main (void)
 {
-	printf("%d\n",pow(2,38));
+	printf("%f\n",pow(2,3));
 	return 0;
 }

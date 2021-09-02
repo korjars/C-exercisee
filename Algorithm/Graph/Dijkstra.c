@@ -12,7 +12,7 @@ void Init ()
 	memset(map,Inf,sizeof(map));
 	for(int i=1;i<=n;i++)
 	{
-		map[i][i]=0;
+		map[i][i]=0;//与自己的距离为零。
 	}
 }
 
@@ -31,7 +31,7 @@ for(int t=1;t<=m;t++)
 	
 }
 
-void Dijkstra(int u)//u表示起点 dis[i]表示u到各店的距离。
+void Dijkstra(int u)//u表示起点 dis[i]表示u到各点的距离。
 {
 	memset(vis,0,sizeof(vis));
 	for(int t=1;t<=n;t++)
