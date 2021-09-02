@@ -27,9 +27,9 @@ int main()
     int A[10] = {1,5,4,3,2,7,6,9,8,666};
     printf("%d\n",sizeof(A));
     InsertSort(A);
-    for (int i = 0; i < sizeof(A)/sizeof(int); i++)
+    for (int i = 0; i < 10; i++)
     {
-        printf("%d < ",A[i]);
+        printf("%d\n", A[i]);
     }
     
 }
