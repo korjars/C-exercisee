@@ -14,27 +14,27 @@ void findALLFiles(const char *path);
 
 int countLines(const char *filename)
 {
-                FILE *fp;
-                int count = 0;
-                int temp;
-                
-                if ((fp = fopen(filename, "r")) == NULL) 
-                {
-                                fprintf(stderr, "Can not open the file：%s\n", filename);
-                                return 0;
-                }
-                
-                while ((temp = fgetc(fp)) != EOF)
-                {
-                                if (temp == '\n')
-                                {
-                                                count++;
-                                }
-                }
-                
-                fclose(fp);
-                
-                return count;
+      FILE *fp;
+      int count = 0;
+      int temp;
+      
+      if ((fp = fopen(filename, "r")) == NULL) 
+      {
+                      fprintf(stderr, "Can not open the file：%s\n", filename);
+                      return 0;
+      }
+      
+      while ((temp = fgetc(fp)) != EOF)
+      {
+                      if (temp == '\n')
+                      {
+                                      count++;
+                      }
+      }
+      
+      fclose(fp);
+      
+      return count;
 }
 
 void findAllCodes(const char *path)

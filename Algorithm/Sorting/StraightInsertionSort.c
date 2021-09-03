@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<math.h>
+#include"TheListA.h"
 
 void InsertSort(int A[])
 {
@@ -22,6 +23,26 @@ void InsertSort(int A[])
     }
 }
 
+void InsertSortForTheListA(SqList *L)
+{
+    //printf("%d\n",sizeof(A));
+    for (int i = 1; i < L->length + 1; i++)
+    {   
+        L->r[0] = L->r[i];
+        for (int j = i-1; j >= 0; j--)
+        {
+            if (L->r[0].key < L->r[j].key)
+            {
+                L->r[j+1] = L->r[j];
+            }
+            else
+            {
+                L->r[j+1] = L->r[0];
+                break;
+            }
+        }
+    }
+}
 int main()
 {
     int A[10] = {1,5,4,3,2,7,6,9,8,666};
@@ -29,7 +50,11 @@ int main()
     InsertSort(A);
     for (int i = 0; i < 10; i++)
     {
-        printf("%d\n", A[i]);
+        printf("%d < ", A[i]);
     }
-    
+    InitA();
+    outbefor();
+    InsertSortForTheListA(&L);
+    outlater();
+    return 0;
 }
