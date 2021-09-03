@@ -52,7 +52,7 @@ void test(void (*B)())
 {
     InitA();
     outbefor();
-    printf("\nL：%d\n",L);
+    printf("\n\nL：%d\n",L);
     printf("\n这里函数必须传入L的地址：%d\n",&L);
     B(&L);
     outlater();
