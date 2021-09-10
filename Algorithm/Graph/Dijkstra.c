@@ -7,7 +7,7 @@ int map[1005][1005];
 int vis[1005],dis[1005];
 int n,m;//n个点，m条边
 
-void Init ()
+void Init()
 {
 	memset(map,Inf,sizeof(map));
 	for(int i=1;i<=n;i++)

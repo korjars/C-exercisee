@@ -17,7 +17,17 @@ typedef struct
     int length;
 }HString;
 
+SString S;
+SString T;
 
-int next[];
-int nextval[];
-
+void InitTS()
+{
+    strcpy(S.ch,"15279287199");
+    S.length = strlen(S.ch);
+    printf("S.ch = %s\n",S.ch);
+    printf("S.length = %d\n",S.length);
+    strcpy(T.ch,"287");
+    T.length = strlen(T.ch);
+    printf("T.ch = %s\n",T.ch);
+    printf("T.length = %d\n",T.length);
+}
