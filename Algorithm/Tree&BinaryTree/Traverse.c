@@ -19,6 +19,28 @@ int ProOrder(BiTNode * T)
 		return 1;
 }
 
+int InOrder(BiTree T){
+    if(T){
+        if(InOrder(T->lchild))
+            if(visit(T))
+                if(InOrder(T->rchild)) return 1;//正确执行相当于跳出。
+        return 0;
+    }
+    else
+        return 1;
+}
+
+int PostOrder(BiTree T){
+    if(T){
+        if(PostOrder(T->lchild))
+            if(PostOrder(T->rchild))
+                if(visit(T)) return 1;
+        return 0;
+    }
+    else
+        return 1;
+}
+
 int main(){
 	for (int i = 0; i < 10; i++)
 	{
